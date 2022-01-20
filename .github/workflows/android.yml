@@ -1,5 +1,14 @@
 name: Android CI
 
+on:
+  workflow_dispatch:
+    inputs:
+      build-target:
+        description: 'Build Target ("nightly"/"beta"/"non-release")'
+        type: string
+        required: true
+        default: "beta"
+        
 jobs:
   build:
 
